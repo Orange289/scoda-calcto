@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class='no-js lt-ie9 lt-ie8 lt-ie7'> <![endif]-->
+<!--[if IE 7]> <html class='no-js lt-ie9 lt-ie8'> <![endif]-->
+<!--[if IE 8]> <html class='no-js lt-ie9'> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js'> <!--<![endif]-->
+	<head>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' href='css/style.min.css'>
+		<link rel='stylesheet' href='css/jquery.formstyler.css'>
+		<link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'>
+		<script src='js/jquery.min.js'></script>
+		<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/base/jquery-ui.css' rel='stylesheet'>
+		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+		<script src='js/jquery.formstyler.min.js'></script>
+		<script src='js/jquery.chained.js'></script>
+		<title>
+			Skoda Calculator1
+		</title>
+	</head>
+	<body class='page-body'>
+		<header class='page-header'>
+			<nav class='main-nav'>
+				<div class='main-nav__left'>
+					<img class='main-nav__logo' src='img/logo.png' alt='logo-skoda' width='139' height='40'>
+					<ul>
+						<li><a class='main-nav__models' href='#'>Модели</a></li>
+						<li><a class='main-nav__menu' href='#'>Меню</a></li>
+					</ul>
+				</div>
+				<ul class='main-nav__right'>
+					<li><a class='main-nav__dealers' href='#'>Дилеры</a></li>
+					<li><a class='main-nav__config' href='#'>Конфигуратор</a></li>
+					<li><a class='main-nav__list' href='#'></a></li>
+					<li><a class='main-nav__loupe' href='#'></a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class='page-main'>
+			<h1>Калькулятор ТО</h1>
+			<section class='selection'>
+				<div class='selection__options'>
+					<div class='container'>
+						<h2>Выберите дилерский центр и модель</h2>
+						<button class='btn btn--location' type='submit'>
+							<svg class='selection__icon-location'
+							 xmlns='http://www.w3.org/2000/svg'
+							 xmlns:xlink='http://www.w3.org/1999/xlink'
+							 width='18.5px' height='18.5px'>
+							<path fill-rule='evenodd'	stroke='rgb(75, 168, 46)' stroke-width='1px' stroke-linecap='butt' stroke-linejoin='miter' fill='none'
+							 d='M10.865,16.159 L17.380,1.512 C17.633,0.944 17.052,0.364 16.484,0.616 L1.826,7.126 C1.284,7.367 1.290,8.136 1.834,8.370 L7.035,10.597 C7.196,10.666 7.323,10.793 7.392,10.954 L9.621,16.151 C9.854,16.695 10.625,16.700 10.865,16.159 Z'/>
+							</svg>
+						</button>
+						<select class='selection__select selection__select--city' name='city' id='city'>
+							<option value=''>Город</option>
+							<option value='abacan'>Абакан</option>
+							<option value='astrakhan'>Астрахань</option>
+							<option value='belgorod'>Белгород</option>
+							<option value='vladimir'>Владимир</option>
+							<option value='volgograd'>Волгоград</option>
+							<option value='vologda'>Вологда</option>
+							<option value='voronezh'>Воронеж</option>
+							<option value='ekaterinburg'>Екатеринбург</option>
+							<option value='ivanovo'>Иваново</option>
+							<option value='izhevsk'>Ижевск</option>
+						</select>
+						<select class='selection__select selection__select--center' name='center' id='center'>
+							<option value=''>Выберите центр</option>
+							<option class='abacan' value='abacan1'>Медведь-Юг</option>
+							<option class='astrakhan' value='astrakhan1'>Колесо</option>
+							<option class='belgorod' value='belgorod1'>Моравия-Моторс</option>
+							<option class='vladimir' value='vladimir1'>Млада-Авто</option>
+							<option class='volgograd' value='volgograd1'>АГАТ Виктория</option>
+							<option class='volgograd' value='volgograd2'>Волга-Раст-Октава</option>
+							<option class='voronezh' value='voronezh1'>Автомир Богемия Воронеж</option>
+							<option class='ekaterinburg' value='ekaterinburg1'>АСМОТО Славия</option>
+							<option class='ekaterinburg' value='ekaterinburg2'>Европа Авто</option>
+							<option class='ivanovo' value='ivanovo1'>РАДАР Холдинг</option>
+							<option class='izhevsk' value='izhevsk1'>АСПЭК-Лидер</option>
+						</select>
+						<script type='text/javascript'> $(document).ready(function(){ $('#center').chained('#city');}); </script>
+						<a class='btn btn--open-map' href='#' id='open-map'>Показать на карте</a>
+					</div>
+				</div>
+				<div class='selection__cars'>
+					<div class='container' style='font-size: 0;'>
+						<a class='selection__car' id='rapid' href='calculation.html'>
+							<div class='selection__img'>
+								<img src='img/img-rapid.png' alt='rapid' width='259' height='151'>
+							</div>
+							<b>Rapid</b>
+						</a>
+						<a class='selection__car' id='octavia' href='calculation.html'>
+							<div class='selection__img'>
+								<img src='img/img-octavia.png' alt='octavia' width='259' height='123'>
+							</div>
+							<b>Octavia</b>
+						</a>
+						<a class='selection__car'	id='roomster' href='calculation.html'>
+							<div class='selection__img'>
+								<img src='img/img-roomster.png' alt='roomster' width='247' height='159'>
+							</div>
+							<b>Roomster</b>
+						</a>
+						<a class='selection__car' id='fabia' href='calculation.html'>
+							<div class='selection__img'>
+								<img src='img/img-fabia.png' alt='fabia' width='259' height='161'>
+							</div>
+							<b>Fabia</b>
+						</a>
+						<a class='selection__car' id='yeti' href='calculation.html'>
+							<div class='selection__img'>
+								<img src='img/img-yeti.png' alt='yeti' width='258' height='153'>
+							</div>
+							<b>Yeti</b>
+						</a>
+						<a class='selection__car' id='superb' href='calculation.html'>
+							<div class='selection__img'>
+								<img src='img/img-superb.png' alt='rapid' width='232' height='139'>
+							</div>
+							<b>Superb</b>
+						</a>
+						<a class='selection__car' id='kodiaq' href='calculation.html'>
+							<div class='selection__img'>
+								<img src='img/img-kodiaq.png' alt='rapid' width='246' height='141'>
+							</div>
+							<b>Kodiaq</b>
+						</a>
+					</div>
+				</div>
+				<div class='map' id='map'>
+					<div class='map__dealers' width='830' height='600'></div>
+					<button class='btn btn--close' type='button' title='Закрыть' id='map-close'>Закрыть</button>
+				</div>
+			</section>
+		</main>
+		<script src='js/script.js'></script>
+		<script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+		<script src='js/dealers.map.js'></script>
+		<script src='js/layout.js'></script>
+	</body>
+</html>
